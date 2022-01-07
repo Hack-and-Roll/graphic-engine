@@ -1,4 +1,5 @@
 import backgrounds from "./graphics/backgrounds.js";
+import pets from "./graphics/pets.js";
 console.log("hello");
 
 // context
@@ -30,9 +31,10 @@ function drawArms() {
     c.fillRect(220, 200, 100, 180);
 }
 
-function drawPet() {
-    c.fillStyle = '#FFFFFFAA';
-    c.fillRect(260, 200, 140, 200);
+function drawPet(key, colour) {
+/*    c.fillStyle = '#FFFFFFAA';
+    c.fillRect(260, 200, 140, 200);*/
+    pets[key](colour);
 }
 
 drawBackground("plain", '#00AAAA88');
@@ -40,4 +42,4 @@ drawBody();
 drawArms();
 drawFace();
 drawHat();
-drawPet();
+drawPet("pat", '#b700ff');
