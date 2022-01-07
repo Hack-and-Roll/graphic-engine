@@ -1,4 +1,9 @@
 import backgrounds from "./graphics/backgrounds.js";
+import pets from "./graphics/pets.js";
+import bodies from "./graphics/bodies.js";
+import faces from "./graphics/faces.js";
+import arms from "./graphics/arms.js";
+import hats from "./graphics/hats.js";
 console.log("hello");
 
 // context
@@ -14,9 +19,10 @@ function drawFace() {
     c.fillRect(90, 80, 140, 140);
 }
 
-function drawBody() {
+function drawBody(key, colour) {
     c.fillStyle = '#AAFF0088';
-    c.fillRect(90, 200, 140, 200);
+    // c.fillRect(90, 200, 140, 200);
+    bodies[key](colour);
 }
 
 function drawHat() {
@@ -35,8 +41,8 @@ function drawPet() {
     c.fillRect(260, 200, 140, 200);
 }
 
-drawBackground("plain", '#00AAAA88');
-drawBody();
+drawBackground("forest", '#9999F0');
+drawBody("beach", '#F0EEAA');
 drawArms();
 drawFace();
 drawHat();
