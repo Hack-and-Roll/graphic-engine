@@ -36,9 +36,10 @@ function drawArms() {
     c.fillRect(220, 200, 100, 180);
 }
 
-function drawPet() {
-    c.fillStyle = '#FFFFFFAA';
-    c.fillRect(260, 200, 140, 200);
+function drawPet(key, colour) {
+/*    c.fillStyle = '#FFFFFFAA';
+    c.fillRect(260, 200, 140, 200);*/
+    pets[key](colour);
 }
 
 drawBackground("forest", '#9999F0');
@@ -46,4 +47,4 @@ drawBody("beach", '#F0EEAA');
 drawArms();
 drawFace();
 drawHat();
-drawPet();
+drawPet("pat", '#b700ff');
