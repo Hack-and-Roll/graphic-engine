@@ -19,7 +19,7 @@ function drawNormal(colour) {
     c.closePath();
     c.fill();
 
-    c.fillStyle = colour || 'sandybrown';
+    c.fillStyle = 'sandybrown';
     c.beginPath();
     c.arc(50, 330, 15, 0, Math.PI * 2, false);
     c.closePath();
