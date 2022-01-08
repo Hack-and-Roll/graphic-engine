@@ -304,7 +304,7 @@ function drawPat(colour) {
     c.fillRect(340, 330, 10, 10);
     c.fillRect(350, 330, 10, 10);
     c.fillRect(360, 330, 10, 10);
-    
+
     c.fillRect(300, 320, 10, 10);
     c.fillRect(310, 320, 10, 10);
     c.fillRect(320, 320, 10, 10);
