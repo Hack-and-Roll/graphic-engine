@@ -17,7 +17,7 @@ function drawBackground(key, colour) {
 function drawFace(key, colour) {
     c.fillStyle = '#FF000044';
     c.fillRect(90, 80, 140, 140);
-    faces[key](colour);
+    // faces[key](colour);
 }
 
 function drawBody(key, colour) {
@@ -31,10 +31,11 @@ function drawHat() {
     c.fillRect(70, 50, 180, 80);
 }
 
-function drawArms() {
-    c.fillStyle = '#FF00FF88';
-    c.fillRect(20, 200, 80, 180);
-    c.fillRect(220, 200, 100, 180);
+function drawArms(key, colour) {
+    // c.fillStyle = '#FF00FF22';
+    // c.fillRect(20, 200, 80, 180);
+    // c.fillRect(220, 200, 100, 180);
+    arms[key](colour);
 }
 
 function drawPet(key, colour) {
@@ -43,9 +44,9 @@ function drawPet(key, colour) {
     pets[key](colour);
 }
 
-drawBackground("forest", '#9999F0');
+drawBackground("plain", null);
 drawBody("beach", '#F0EEAA');
-drawArms();
+drawArms("robot", null);
 drawFace("dude", '#593a00');
 drawHat();
 drawPet("pat", '#b700ff');

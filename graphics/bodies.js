@@ -12,7 +12,7 @@ function drawNormal(colour) {
     c.fill();
 
     c.beginPath();
-    c.fillStyle = colour || 'blue';
+    c.fillStyle = colour || '#F0EEAA';
     c.beginPath();
     c.moveTo(150, 200);
     c.lineTo(170, 200);
@@ -24,7 +24,7 @@ function drawNormal(colour) {
 }
 
 function drawBeach(colour) {
-    c.fillStyle = colour || 'blue';
+    c.fillStyle = colour || '#F0EEAA';
     c.fillRect(90, 200, 140, 120);
 
     c.fillStyle = 'white';

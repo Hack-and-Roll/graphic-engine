@@ -33,8 +33,23 @@ var tree = function(x, y) {
     c.fill();
 }
 
+var star = function(x, y) {
+    c.fillStyle = '#DDE022';
+    c.beginPath();
+    c.moveTo(x, y);
+    c.lineTo(x + 5, y + 2);
+    c.lineTo(x + 7, y + 10);
+    c.lineTo(x + 9, y + 2);
+    c.lineTo(x + 14, y);
+    c.lineTo(x + 9, y - 2);
+    c.lineTo(x + 7, y - 10);
+    c.lineTo(x + 5, y - 2);
+    c.closePath();
+    c.fill();
+}
+
 function drawPlain(colour) {
-    c.fillStyle = colour || 'blue';
+    c.fillStyle = colour || '#9999F0';
     c.fillRect(0, 0, 400, 400);
 }
 
@@ -68,10 +83,35 @@ function drawForest(colour) {
     tree(60, 380);
 }
 
+function drawSpace(colour) {
+    c.fillStyle = '#301940';
+    c.fillRect(0, 0, 400, 400);
+
+    star(300, 100);
+    star(60, 40);
+    star(15, 90);
+    star(50, 160);
+    star(30, 210);
+    star(20, 280);
+    star(90, 100);
+    star(120, 140);
+    star(130, 70);
+    star(180, 50);
+    star(250, 20);
+    star(320, 50);
+    star(270, 160);
+    star(340, 180);
+    star(370, 220);
+    star(370, 90);
+    star(320, 290);
+    star(270, 250);
+}
+
 var backgrounds = {
     plain: drawPlain,
     cloud: drawCloud,
-    forest: drawForest
+    forest: drawForest,
+    space: drawSpace
 }
 
 export {backgrounds as default};
